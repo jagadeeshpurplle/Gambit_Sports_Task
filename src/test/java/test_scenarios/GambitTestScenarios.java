@@ -410,7 +410,7 @@ public class GambitTestScenarios {
 				pages.MainPage.removeSearchKeyword(driver);
 				System.out.println("No result for the search");
 				String path = common.Common_methods.capture(driver, common.Common_methods.fileName());
-				logger.log(LogStatus.INFO, "No result for the search </br>"+"Screenshot--->"+logger.addScreenCapture(path));
+				logger.log(LogStatus.FAIL, "No result for the search </br>"+"Screenshot--->"+logger.addScreenCapture(path));
 				
 				continue;
 			}else if(initialCountOfPlayers==countOfPlayers) { // if nitial count & resulantant count becomes same, this block will execute
@@ -420,7 +420,7 @@ public class GambitTestScenarios {
 				if(initialresultantDataCombined.equals(resultantDataCombined)) { // if both count same, my next condition would be this block = if initial data and resultant data looks same this block will execute
 					System.out.println("No more data loaded");
 					String path = common.Common_methods.capture(driver, common.Common_methods.fileName());
-					logger.log(LogStatus.INFO, "No more data loaded </br>"+"Screenshot--->"+logger.addScreenCapture(path));
+					logger.log(LogStatus.FAIL, "No more data loaded </br>"+"Screenshot--->"+logger.addScreenCapture(path));
 					
 				}
 				
@@ -444,7 +444,7 @@ public class GambitTestScenarios {
 			
 		}
 	
-		
+		common.Common_methods.printLine();
 		
 	}
 	
