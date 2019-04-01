@@ -1,5 +1,6 @@
 package test_scenarios;
 
+import org.testng.annotations.Test;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.File;
