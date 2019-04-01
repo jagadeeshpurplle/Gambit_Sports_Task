@@ -9,6 +9,9 @@
           <include name="iAmDone"/>
           <include name="iAmDoneMethod"/>
           <include name="search"/>
+          <include name="Player_And_Games_Tabs"/>
+          <include name="headerCollapseExpand"/>
+          <include name="scroll_player_tab"/>
         </methods>
       </class> <!-- test_scenarios.GambitTestScenarios -->
     </classes>

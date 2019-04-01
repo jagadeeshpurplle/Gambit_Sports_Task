@@ -105,14 +105,14 @@ public class GambitTestScenarios {
 			driver= new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			logger.log(LogStatus.ERROR, e.getMessage());
-			logger.log(LogStatus.INFO, "Make sure appium server is up and running");
+			System.out.println("Make sure appium server is up and running");
+			
 			System.exit(0);
 		}
  
 	}
 	
-	@AfterTest
+	@AfterTest	
 	public void iAmDone() {
 		hasAppCrashed(); // it will check whether app crashed or not
 		extent.flush();
@@ -160,7 +160,6 @@ public class GambitTestScenarios {
 			exitOnCountZero();
 		}
 		MobileElement parentTab =  (MobileElement) pages.MainPage.tabParent(driver);
-	
 		List<MobileElement> noOfTabs = parentTab.findElements(By.id(pages.MainPage.eachTab(driver)));
 		
 		System.out.println("No of TABs : "+noOfTabs.size());
@@ -389,6 +388,10 @@ public class GambitTestScenarios {
 		ArrayList<String> values = common.Common_methods.readDataFromFile(System.getProperty("user.dir")+"/inputs/searchKeywords.txt"); // `searchKeywords` file contains the keywords that going to be perform search
 
 		for(int data =0 ;data<values.size();data++) { // iterate over all the keywords and search one by one
+			if(values.get(data).equals("")) {
+				System.out.println("Empty seach keyword not accepted");
+				logger.log(LogStatus.WARNING, "Empty search keyword not accepted");
+			}
 			int initialCountOfPlayers = Integer.parseInt(pages.MainPage.playerCount(driver).getText());
 			List<MobileElement> initialresultsFirstName = pages.MainPage.playersAndGamesRoot(driver).findElements(By.id(pages.MainPage.firstName(driver)));
 			List<MobileElement> initialresultsLastName = pages.MainPage.playersAndGamesRoot(driver).findElements(By.id(pages.MainPage.lastName(driver)));
@@ -420,8 +423,7 @@ public class GambitTestScenarios {
 				if(initialresultantDataCombined.equals(resultantDataCombined)) { // if both count same, my next condition would be this block = if initial data and resultant data looks same this block will execute
 					System.out.println("No more data loaded");
 					String path = common.Common_methods.capture(driver, common.Common_methods.fileName());
-					logger.log(LogStatus.FAIL, "No more data loaded </br>"+"Screenshot--->"+logger.addScreenCapture(path));
-					
+					logger.log(LogStatus.FAIL, "No more data loaded </br>"+"Screenshot--->"+logger.addScreenCapture(path));	
 				}
 				
 			}else { // if data successfully loaded, this block will execute
@@ -434,6 +436,7 @@ public class GambitTestScenarios {
 					System.out.println(resultantDataCombined.get(check));
 					if(resultantDataCombined.get(check).toLowerCase().contains(values.get(data).toLowerCase())) {
 						System.out.println("resultant data came as per provided search keyword");
+						logger.log(LogStatus.PASS, "resultant data came as per provided search keyword");
 					}
 				}
 				
@@ -494,7 +497,10 @@ public class GambitTestScenarios {
 						System.out.println(prop.getProperty("loader_keep_on_loading"));
 						String path = common.Common_methods.capture(driver, common.Common_methods.fileName());
 						logger.log(LogStatus.FAIL, "loader_keep_on_loading </br>"+"Screenshot--->"+logger.addScreenCapture(path));
+						extent.flush();
+						extent.close();
 						System.exit(0);
+						
 					}
 				} catch (Exception e) {
 				}
@@ -591,6 +597,7 @@ public class GambitTestScenarios {
 			System.out.println(prop.getProperty("0_no_of_players"));
 			String path = common.Common_methods.capture(driver, common.Common_methods.fileName());
 			logger.log(LogStatus.FAIL, prop.getProperty("0_no_of_players")+"</br> Screenshot--->"+logger.addScreenCapture(path));
+			extent.flush();
 			driver.quit();
 			System.exit(0);
 		}
