@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="124141" started-at="2019-04-01T13:43:21Z" finished-at="2019-04-01T13:45:25Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="124141" started-at="2019-04-01T13:43:21Z" finished-at="2019-04-01T13:45:25Z">
+      <class name="test_scenarios.GambitTestScenarios">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="setup" is-config="true" duration-ms="5189" started-at="2019-04-01T13:43:21Z" finished-at="2019-04-01T13:43:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="headerCollapseExpand()[pri:1, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="headerCollapseExpand" duration-ms="4259" started-at="2019-04-01T13:43:27Z" finished-at="2019-04-01T13:43:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headerCollapseExpand -->
+        <test-method status="PASS" signature="iAmDoneMethod(org.testng.ITestResult)[pri:0, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="iAmDoneMethod" is-config="true" duration-ms="51" started-at="2019-04-01T13:43:31Z" finished-at="2019-04-01T13:43:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=headerCollapseExpand status=SUCCESS method=GambitTestScenarios.headerCollapseExpand()[pri:1, instance:test_scenarios.GambitTestScenarios@1442d7b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iAmDoneMethod -->
+        <test-method status="PASS" signature="Player_And_Games_Tabs()[pri:2, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="Player_And_Games_Tabs" duration-ms="6650" started-at="2019-04-01T13:43:31Z" finished-at="2019-04-01T13:43:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Player_And_Games_Tabs -->
+        <test-method status="PASS" signature="iAmDoneMethod(org.testng.ITestResult)[pri:0, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="iAmDoneMethod" is-config="true" duration-ms="113" started-at="2019-04-01T13:43:38Z" finished-at="2019-04-01T13:43:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Player_And_Games_Tabs status=SUCCESS method=GambitTestScenarios.Player_And_Games_Tabs()[pri:2, instance:test_scenarios.GambitTestScenarios@1442d7b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iAmDoneMethod -->
+        <test-method status="PASS" signature="scroll_player_tab()[pri:3, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="scroll_player_tab" duration-ms="42097" started-at="2019-04-01T13:43:38Z" finished-at="2019-04-01T13:44:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scroll_player_tab -->
+        <test-method status="PASS" signature="iAmDoneMethod(org.testng.ITestResult)[pri:0, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="iAmDoneMethod" is-config="true" duration-ms="36" started-at="2019-04-01T13:44:20Z" finished-at="2019-04-01T13:44:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=scroll_player_tab status=SUCCESS method=GambitTestScenarios.scroll_player_tab()[pri:3, instance:test_scenarios.GambitTestScenarios@1442d7b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iAmDoneMethod -->
+        <test-method status="PASS" signature="search()[pri:4, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="search" duration-ms="62844" started-at="2019-04-01T13:44:20Z" finished-at="2019-04-01T13:45:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="iAmDoneMethod(org.testng.ITestResult)[pri:0, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="iAmDoneMethod" is-config="true" duration-ms="575" started-at="2019-04-01T13:45:23Z" finished-at="2019-04-01T13:45:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=search status=SUCCESS method=GambitTestScenarios.search()[pri:4, instance:test_scenarios.GambitTestScenarios@1442d7b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iAmDoneMethod -->
+        <test-method status="PASS" signature="iAmDone()[pri:0, instance:test_scenarios.GambitTestScenarios@1442d7b5]" name="iAmDone" is-config="true" duration-ms="2291" started-at="2019-04-01T13:45:23Z" finished-at="2019-04-01T13:45:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iAmDone -->
+      </class> <!-- test_scenarios.GambitTestScenarios -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
